@@ -1,0 +1,22 @@
+{
+  "boblovespihonkaimod:CommonPower": {
+    "NAME": "Placeholder Power",
+    "DESCRIPTIONS": ["You applied #b", " keyword.", " keywords."]
+  },
+  "boblovespihonkaimod:RarePower": {
+    "NAME": "Placeholder Power",
+    "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy.", " enemies."]
+  },
+  "boblovespihonkaimod:honkaiPower": {
+    "NAME": "Honkai",
+    "DESCRIPTIONS": ["A malevolent energy."]
+  },
+  "boblovespihonkaimod:cometWardPower": {
+    "NAME": "Comet Ward",
+    "DESCRIPTIONS": ["Common attacks apply weak to enemies."]
+  },
+  "boblovespihonkaimod:shockResonance": {
+    "NAME": "Shock Resonance",
+    "DESCRIPTIONS": ["When an enemy is stunned, apply 1 Vulnerable."]
+  }
+}

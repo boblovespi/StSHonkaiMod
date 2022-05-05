@@ -1,0 +1,129 @@
+{
+  "boblovespihonkaimod:DefaultCommonAttack": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "boblovespihonkaimod:DefaultCommonSkill": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "boblovespihonkaimod:DefaultCommonPower": {
+    "NAME": "Hold Place",
+    "DESCRIPTION": "Gain !M! boblovespihonkaimod:Keyword.",
+    "UPGRADE_DESCRIPTION": "Gain !M! boblovespihonkaimod:Keywords."
+  },
+  "boblovespihonkaimod:DefaultUncommonAttack": {
+    "NAME": "Big slap",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "boblovespihonkaimod:DefaultUncommonSkill": {
+    "NAME": "A Better Defend",
+    "DESCRIPTION": "Gain !B! Plated Armor. Affected by Dexterity."
+  },
+  "boblovespihonkaimod:DefaultUncommonPower": {
+    "NAME": "Weirdness",
+    "DESCRIPTION": "Gain X boblovespihonkaimod:Keywords.",
+    "UPGRADE_DESCRIPTION": "Gain X +1 boblovespihonkaimod:Keywords."
+  },
+  "boblovespihonkaimod:DefaultRareAttack": {
+    "NAME": "TOUCH",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "boblovespihonkaimod:DefaultRareSkill": {
+    "NAME": "For Each Loop x2",
+    "DESCRIPTION": "Apply !M! Vulnerable to all enemies, 2 times.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable to all enemies, 3 times."
+  },
+  "boblovespihonkaimod:DefaultRarePower": {
+    "NAME": "In-Progress Form",
+    "DESCRIPTION": "At the start of your turn, play a TOUCH."
+  },
+  "boblovespihonkaimod:DefaultAttackWithVariable": {
+    "NAME": "Special Strike",
+    "DESCRIPTION": "Deal !D! damage [E] times. NL (Deal !boblovespihonkaimod:ENERGY_DAMAGE! damage total.)"
+  },
+  "boblovespihonkaimod:DefaultSecondMagicNumberSkill": {
+    "NAME": "Cool 2 Number Card",
+    "DESCRIPTION": "Apply !M! Vulnerable and !boblovespihonkaimod:SecondMagic! poison to an enemy."
+  },
+  "boblovespihonkaimod:OrbSkill": {
+    "NAME": "Get Orb",
+    "DESCRIPTION": "Channel 1 Default Orb."
+  },
+  "boblovespihonkaimod:meteorKata": {
+    "NAME": "Meteor Kata",
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Has a 25% chance to Stun when the enemy is attacking when dealing unblocked damage."
+  },
+  "boblovespihonkaimod:whiteComet": {
+    "NAME": "White Comet",
+    "DESCRIPTION": "Equip the boblovespihonkaimod:White_Comet Battlesuit. Gain !M! boblovespihonkaimod:Honkai."
+  },
+  "boblovespihonkaimod:nekoStomp": {
+    "NAME": "Neko Stomp",
+    "DESCRIPTION": "Deal !D! damage. If this is the first card played this turn, deal !boblovespihonkaimod:nekoStompD! damage instead."
+  },
+  "boblovespihonkaimod:antimatterRounds": {
+    "NAME": "Antimatter Rounds",
+    "DESCRIPTION": "Deal !D! damage. Deal !M! additional damage against shields. If this attack breaks a shield, stun the enemy."
+  },
+  "boblovespihonkaimod:cometWard": {
+    "NAME": "Comet Ward",
+    "DESCRIPTION": "Gain !B! Block. This turn, common attacks apply Weak. Exhaust."
+  },
+  "boblovespihonkaimod:subspaceLance": {
+    "NAME": "Subspace Lance",
+    "DESCRIPTION": "Deals !D! damage !boblovespihonkaimod:SecondMagic! times. Deals additional damage equal to half your boblovespihonkaimod:Honkai. Shuffle a Void into your draw pile."
+  },
+  "boblovespihonkaimod:bySongDefended": {
+    "NAME": "By Song Defended",
+    "DESCRIPTION": "Gain !B! Block. Gain !M! Temporary HP."
+  },
+  "boblovespihonkaimod:honkaiEnergy": {
+    "NAME": "Honkai Energy",
+    "DESCRIPTION": "Ethereal. Unplayable. When drawn, gain !M! boblovespihonkaimod:Honkai."
+  },
+  "boblovespihonkaimod:subspacePocket": {
+    "NAME": "Subspace Pocket",
+    "DESCRIPTION": "card creation, requires 10 honkai, consumes 10 honkai, creates a random rare?"
+  },
+  "boblovespihonkaimod:voidDrifter": {
+    "NAME": "Void Drifter",
+    "DESCRIPTION": "Equip the Void Drifter Battlesuit. Gain !M! boblovespihonkaimod:Honkai."
+  },
+  "boblovespihonkaimod:divinePrayer": {
+    "NAME": "Divine Prayer",
+    "DESCRIPTION": "Heal !M!. Remove !boblovespihonkaimod:SecondMagic! boblovespihonkaimod:Honkai. Exhaust."
+  },
+  "boblovespihonkaimod:shockResonance": {
+    "NAME": "Shock Resonance",
+    "DESCRIPTION": "Stunning enemies applies 1 Vulnerable to them."
+  },
+  "boblovespihonkaimod:overdriveShield": {
+    "NAME": "Overdrive Shield",
+    "DESCRIPTION": "Gain !B! Block. Gain !M! boblovespihonkaimod:Honkai."
+  },
+  "boblovespihonkaimod:overdriveCore": {
+    "NAME": "Overdrive Core",
+    "DESCRIPTION": "Gain [E] [E]. NL Gain !boblovespihonkaimod:SecondMagic! boblovespihonkaimod:Honkai."
+  },
+  "boblovespihonkaimod:nekoCartwheel": {
+    "NAME": "Neko Cartwheel",
+    "DESCRIPTION": "Gain !B! Block !M! times."
+  },
+  "boblovespihonkaimod:gunstorm": {
+    "NAME": "Gunstorm",
+    "DESCRIPTION": "Deal !D! damage !M! times to all enemies. Requires 5 boblovespihonkaimod:Honkai to play."
+  },
+  "boblovespihonkaimod:voidFlechette": {
+    "NAME": "Void Flechette",
+    "DESCRIPTION": "Deal !D! damage !M! times. Costs 0 if you have 12 or more boblovespihonkaimod:Honkai."
+  },
+  "boblovespihonkaimod:phaseShuttle": {
+    "NAME": "Phase Shuttle",
+    "DESCRIPTION": "Draw !M! cards. Gain !M! energy. Add !boblovespihonkaimod:SecondMagic! Voids to your discard pile. Exhaust."
+  },
+  "boblovespihonkaimod:souliumReactor": {
+    "NAME": "Soulium Reactor",
+    "DESCRIPTION": "Everytime you gain boblovespihonkaimod:Honkai, deal !M! damage to all enemies."
+  }
+}

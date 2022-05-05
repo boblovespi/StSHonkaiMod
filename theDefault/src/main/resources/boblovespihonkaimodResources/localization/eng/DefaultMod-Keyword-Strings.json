@@ -1,0 +1,36 @@
+[
+  {
+    "NAMES": [
+      "keyword",
+      "keywords"
+    ],
+    "DESCRIPTION": "Whenever you play a card, gain 1 dexterity this turn only."
+  },
+  {
+    "PROPER_NAME": "Multiword Keyword",
+    "NAMES": [
+      "Multiword Keyword",
+      "multiword_keyword",
+      "multiword_keywords",
+      "multikey",
+      "multikeyword"
+    ],
+    "DESCRIPTION": "Make sure the first element in the NAMES is the same as your PROPER_NAME. The rest is to match keywords like the single word keyword."
+  },
+  {
+    "PROPER_NAME": "White Comet",
+    "NAMES": [
+      "White_Comet",
+      "White Comet"
+    ],
+    "DESCRIPTION": "Common attacks deal 2 extra damage. Common skills gain 2 extra block."
+  },
+  {
+    "PROPER_NAME": "Honkai",
+    "NAMES": [
+      "Honkai",
+      "honkai"
+    ],
+    "DESCRIPTION": "A malevolent energy."
+  }
+]
