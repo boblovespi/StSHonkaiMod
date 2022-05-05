@@ -34,7 +34,7 @@ public class FreeIfCertainCostMod extends AbstractCardModifier
 	public void onUpdate(AbstractCard card)
 	{
 		int honkai = 0;
-		if (AbstractDungeon.isPlayerInDungeon() && AbstractDungeon.player.hasPower(HonkaiPower.id))
+		if (AbstractDungeon.player != null && AbstractDungeon.player.hasPower(HonkaiPower.id))
 			honkai = AbstractDungeon.player.getPower(HonkaiPower.id).amount;
 		if (honkai >= min)
 			card.costForTurn = 0;

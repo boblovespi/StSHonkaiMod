@@ -125,5 +125,14 @@
   "boblovespihonkaimod:souliumReactor": {
     "NAME": "Soulium Reactor",
     "DESCRIPTION": "Everytime you gain boblovespihonkaimod:Honkai, deal !M! damage to all enemies."
+  },
+  "boblovespihonkaimod:honkaiLance": {
+    "NAME": "Honkai Lance",
+    "DESCRIPTION": "Deal !D! damage. Requires !M! boblovespihonkaimod:Honkai to play."
+  },
+  "boblovespihonkaimod:zeroPointEnergy": {
+    "NAME": "Zero Point Energy",
+    "DESCRIPTION": "Whenever you draw a Void, exhaust the Void and add a Honkai Lance to your hand.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you draw a Void, exhaust the Void and add a Honkai Lance to your hand."
   }
 }
