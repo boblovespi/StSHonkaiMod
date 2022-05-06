@@ -134,5 +134,18 @@
     "NAME": "Zero Point Energy",
     "DESCRIPTION": "Whenever you draw a Void, exhaust the Void and add a Honkai Lance to your hand.",
     "UPGRADE_DESCRIPTION": "Innate. NL Whenever you draw a Void, exhaust the Void and add a Honkai Lance to your hand."
+  },
+  "boblovespihonkaimod:zeitstrom": {
+    "NAME": "Zeitstrom",
+    "DESCRIPTION": "Stun all enemies. Exhaust."
+  },
+  "boblovespihonkaimod:cptSymmetry": {
+    "NAME": "Charge Parity Time Symmetry",
+    "DESCRIPTION": "At the beginning of your turn, draw !M! card from your discard pile.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the beginning of your turn, draw !M! card from your discard pile."
+  },
+  "boblovespihonkaimod:gyrodriveKata": {
+    "NAME": "Gyrodrive Kata",
+    "DESCRIPTION": "Deal !D! damage !M! times. Increase the number of times you deal damage to that enemy by 1 for two turns."
   }
 }

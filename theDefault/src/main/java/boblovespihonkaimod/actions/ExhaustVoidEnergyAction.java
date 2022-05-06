@@ -68,7 +68,7 @@ public class ExhaustVoidEnergyAction extends AbstractGameAction
 			{
 				System.out.println(c);
 				if (c instanceof VoidCard)
-					addToBot(new GainEnergyAction(1));
+					addToBot(new GainEnergyAction(2));
 				p.hand.moveToExhaustPile(c);
 			}
 

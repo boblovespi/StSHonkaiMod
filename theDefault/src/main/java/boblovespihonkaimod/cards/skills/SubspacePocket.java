@@ -50,7 +50,7 @@ public class SubspacePocket extends AbstractDynamicCard
 			upgradeName();
 			baseDraw += UPGRADE_DRAW;
 			draw = baseDraw;
-			upgradeMagicNumber(EXHAUST_UPGRADE);
+			// upgradeMagicNumber(EXHAUST_UPGRADE);
 			initializeDescription();
 		}
 	}

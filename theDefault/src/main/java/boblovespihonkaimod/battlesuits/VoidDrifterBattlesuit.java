@@ -2,8 +2,11 @@ package boblovespihonkaimod.battlesuits;
 
 import boblovespihonkaimod.DefaultMod;
 import boblovespihonkaimod.cards.HonkaiEnergyStatus;
+import boblovespihonkaimod.cards.attacks.HonkaiLance;
 import boblovespihonkaimod.powers.HonkaiPower;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.status.VoidCard;
@@ -44,6 +47,8 @@ public class VoidDrifterBattlesuit extends AbstractBattlesuit
 	public void atStartOfTurn()
 	{
 		AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new HonkaiEnergyStatus(), 1, true, true));
+		AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new HonkaiLance()));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new HonkaiPower(AbstractDungeon.player, AbstractDungeon.player, 2)));
 	}
 
 	@Override

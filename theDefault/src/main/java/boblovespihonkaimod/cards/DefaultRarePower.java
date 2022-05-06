@@ -1,5 +1,6 @@
 package boblovespihonkaimod.cards;
 
+import basemod.AutoAdd;
 import basemod.helpers.BaseModCardTags;
 import boblovespihonkaimod.DefaultMod;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -9,6 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import boblovespihonkaimod.characters.TheDefault;
 import boblovespihonkaimod.powers.RarePower;
 
+@AutoAdd.Ignore
 public class DefaultRarePower extends AbstractDynamicCard {
 
     /*

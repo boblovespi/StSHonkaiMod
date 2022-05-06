@@ -1,5 +1,6 @@
 package boblovespihonkaimod.relics;
 
+import basemod.AutoAdd;
 import basemod.abstracts.CustomRelic;
 import boblovespihonkaimod.DefaultMod;
 import boblovespihonkaimod.util.TextureLoader;
@@ -14,6 +15,7 @@ import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.CollectorCurseEffect;
 
+@AutoAdd.Ignore
 public class DefaultClickableRelic extends CustomRelic implements ClickableRelic { // You must implement things you want to use from StSlib
     /*
      * https://github.com/daviscook477/BaseMod/wiki/Custom-Relics

@@ -62,7 +62,7 @@ public class SouliumReactorPower extends AbstractPower implements CloneablePower
 		if (target == owner && power.ID.equals(HonkaiPower.id))
 		{
 			flash();
-			addToBot(new DamageAllEnemiesAction((AbstractPlayer) owner, amount, DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE));
+			addToBot(new DamageAllEnemiesAction(owner, DamageInfo.createDamageMatrix(amount, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE));
 		}
 	}
 }

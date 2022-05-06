@@ -1,5 +1,6 @@
 package boblovespihonkaimod.relics;
 
+import basemod.AutoAdd;
 import basemod.abstracts.CustomRelic;
 import boblovespihonkaimod.DefaultMod;
 import boblovespihonkaimod.util.TextureLoader;
@@ -9,6 +10,7 @@ import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
+@AutoAdd.Ignore
 public class PlaceholderRelic2 extends CustomRelic {
     /*
      * https://github.com/daviscook477/BaseMod/wiki/Custom-Relics

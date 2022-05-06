@@ -2,33 +2,24 @@ package boblovespihonkaimod.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
 import boblovespihonkaimod.DefaultMod;
-import boblovespihonkaimod.cards.attacks.HonkaiLance;
 import boblovespihonkaimod.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.evacipated.cardcrawl.mod.stslib.powers.StunMonsterPower;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.status.VoidCard;
+import com.megacrit.cardcrawl.actions.unique.RandomCardFromDiscardPileToHandAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
 
-public class ZeroPointEnergyPower extends AbstractPower implements CloneablePowerInterface
+public class CPTSymmetryPower extends AbstractPower implements CloneablePowerInterface
 {
 	private static final Texture tex84 = TextureLoader.getTexture(DefaultMod.makePowerPath("placeholder_power84.png"));
 	private static final Texture tex32 = TextureLoader.getTexture(DefaultMod.makePowerPath("placeholder_power32.png"));
-	public static String id = DefaultMod.makeID("zeroPointEnergyPower");
+	public static String id = DefaultMod.makeID("cptSymmetryPower");
 	public PowerStrings strings;
 	private AbstractCreature source;
 
-	public ZeroPointEnergyPower(final AbstractCreature owner, final AbstractCreature source, final int amount)
+	public CPTSymmetryPower(final AbstractCreature owner, final AbstractCreature source, final int amount)
 	{
 		ID = id;
 		strings = CardCrawlGame.languagePack.getPowerStrings(ID);
@@ -51,7 +42,7 @@ public class ZeroPointEnergyPower extends AbstractPower implements CloneablePowe
 	@Override
 	public AbstractPower makeCopy()
 	{
-		return new ZeroPointEnergyPower(owner, source, amount);
+		return new CPTSymmetryPower(owner, source, amount);
 	}
 
 	@Override
@@ -61,14 +52,10 @@ public class ZeroPointEnergyPower extends AbstractPower implements CloneablePowe
 	}
 
 	@Override
-	public void onCardDraw(AbstractCard card)
+	public void atStartOfTurnPostDraw()
 	{
-		if (card.cardID.equals(VoidCard.ID))
-		{
-			flash();
-			addToTop(new MakeTempCardInHandAction(new HonkaiLance()));
-			addToTop(new ExhaustSpecificCardAction(card, AbstractDungeon.player.hand));
-			addToTop(new GainEnergyAction(1));
-		}
+		flash();
+		for (int i = 0; i < amount; i++)
+			addToTop(new RandomCardFromDiscardPileToHandAction());
 	}
 }

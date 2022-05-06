@@ -39,7 +39,7 @@
             </activation>
             <properties>
                 <Steam.path>C:/Program Files (x86)/Steam/steamapps</Steam.path>
-                <StS.path>${Steam.path}/common/SlayTheSpire/desktop-1.0.jar</StS.path>
+                <StS.path>${Steam.path}/common/SlayTheSpire</StS.path>
             </properties>
         </profile>
     </profiles>

@@ -1,5 +1,6 @@
 package boblovespihonkaimod.relics;
 
+import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.abstracts.CustomBottleRelic;
 import basemod.abstracts.CustomRelic;
@@ -22,6 +23,7 @@ import boblovespihonkaimod.patches.relics.BottledPlaceholderField;
 import java.util.Iterator;
 import java.util.function.Predicate;
 
+@AutoAdd.Ignore
 public class BottledPlaceholderRelic extends CustomRelic implements CustomBottleRelic, CustomSavable<Integer> {
     // This file will show you how to use 2 things - (Mostly) The Custom Bottle Relic and the Custom Savable - they go hand in hand.
 

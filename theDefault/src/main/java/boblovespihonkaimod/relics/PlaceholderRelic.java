@@ -1,11 +1,13 @@
 package boblovespihonkaimod.relics;
 
+import basemod.AutoAdd;
 import basemod.abstracts.CustomRelic;
 import boblovespihonkaimod.DefaultMod;
 import boblovespihonkaimod.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
+@AutoAdd.Ignore
 public class PlaceholderRelic extends CustomRelic {
 
     /*

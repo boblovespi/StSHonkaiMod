@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class FreeIfCertainCostMod extends AbstractCardModifier
 {
-	public static String ID = DefaultMod.makeID("blockMod");
+	public static String ID = DefaultMod.makeID("freeCostMod");
 	private int min;
 	private int baseCost;
 
