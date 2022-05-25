@@ -26,7 +26,7 @@ public class NekoStomp extends AbstractDynamicCard
 	private static final CardTarget TARGET = CardTarget.ENEMY;
 	private static final CardType TYPE = CardType.ATTACK;
 	private static final int COST = 2;
-	private static final int DAMAGE = 15;
+	private static final int DAMAGE = 12;
 	private static final int DAMAGE_IF_FIRST_MULT = 2;
 	private static final int UPGRADE = 5;
 

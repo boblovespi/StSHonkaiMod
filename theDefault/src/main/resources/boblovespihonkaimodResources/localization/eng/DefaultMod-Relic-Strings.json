@@ -44,5 +44,12 @@
     "DESCRIPTIONS": [
       "Gain #b5 #yHonkai at the start of each combat."
     ]
+  },
+  "boblovespihonkaimod:amplifierMatrix": {
+    "NAME": "Amplifier Matrix",
+    "FLAVOR": "A piece of a now dead Honkai core. You can still feel some Honkai energy lingering in it.",
+    "DESCRIPTIONS": [
+      "Whenever you receive #yHonkai, receive #b1 more."
+    ]
   }
 }
