@@ -49,6 +49,8 @@ public class GyrodriveKata extends AbstractDynamicCard
 		{
 			upgradeName();
 			upgradeMagicNumber(UPGRADE_MULTIS);
+			CardModifierManager.getModifiers(this, ClawLikeMod.ID)
+							   .forEach(n -> ((ClawLikeMod) n).updateBaseAttacks(magicNumber));
 			initializeDescription();
 		}
 	}
@@ -88,20 +90,6 @@ public class GyrodriveKata extends AbstractDynamicCard
 		}
 
 		@Override
-		public void onCalculateCardDamage(AbstractCard card, AbstractMonster mo)
-		{
-			if (mo == target)
-			{
-				card.magicNumber = attacks;
-				card.isMagicNumberModified = true;
-			} else
-			{
-				card.magicNumber = baseAttacks;
-				card.isMagicNumberModified = false;
-			}
-		}
-
-		@Override
 		public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action)
 		{
 			if (target == this.target)
@@ -128,6 +116,20 @@ public class GyrodriveKata extends AbstractDynamicCard
 		}
 
 		@Override
+		public void onCalculateCardDamage(AbstractCard card, AbstractMonster mo)
+		{
+			if (mo == target)
+			{
+				card.magicNumber = attacks;
+				card.isMagicNumberModified = true;
+			} else
+			{
+				card.magicNumber = baseAttacks;
+				card.isMagicNumberModified = false;
+			}
+		}
+
+		@Override
 		public void atEndOfTurn(AbstractCard card, CardGroup group)
 		{
 			if (attacks == baseAttacks)
@@ -145,6 +147,14 @@ public class GyrodriveKata extends AbstractDynamicCard
 		public AbstractCardModifier makeCopy()
 		{
 			return new ClawLikeMod(turnsMax, baseAttacks);
+		}
+
+		public void updateBaseAttacks(int num)
+		{
+			if (num > baseAttacks)
+				baseAttacks = num;
+			if (baseAttacks > attacks)
+				attacks = baseAttacks;
 		}
 	}
 

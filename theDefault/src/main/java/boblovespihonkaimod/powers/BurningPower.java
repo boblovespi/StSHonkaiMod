@@ -3,28 +3,30 @@ package boblovespihonkaimod.powers;
 import basemod.interfaces.CloneablePowerInterface;
 import boblovespihonkaimod.DefaultMod;
 import boblovespihonkaimod.util.TextureLoader;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
 
-public class SouliumReactorPower extends AbstractPower implements CloneablePowerInterface
+public class BurningPower extends AbstractPower implements CloneablePowerInterface, HealthBarRenderPower
 {
+	public static final Color color = new Color(0xFF9922ff);
 	private static final Texture tex84 = TextureLoader.getTexture(DefaultMod.makePowerPath("placeholder_power84.png"));
 	private static final Texture tex32 = TextureLoader.getTexture(DefaultMod.makePowerPath("placeholder_power32.png"));
-	public static String id = DefaultMod.makeID("souliumReactorPower");
+	public static String id = DefaultMod.makeID("burningPower");
 	public PowerStrings strings;
 	private AbstractCreature source;
 
-	public SouliumReactorPower(final AbstractCreature owner, final AbstractCreature source, final int amount)
+	public BurningPower(final AbstractCreature owner, final AbstractCreature source, final int amount)
 	{
 		ID = id;
 		strings = CardCrawlGame.languagePack.getPowerStrings(ID);
@@ -34,12 +36,14 @@ public class SouliumReactorPower extends AbstractPower implements CloneablePower
 		this.source = source;
 		this.amount = amount;
 
-		type = PowerType.BUFF;
-		priority = 3;
+		type = PowerType.DEBUFF;
+		isTurnBased = false;
 
 		// We load those txtures here.
 		this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
 		this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
+
+		// priority = 0;
 
 		updateDescription();
 	}
@@ -47,7 +51,7 @@ public class SouliumReactorPower extends AbstractPower implements CloneablePower
 	@Override
 	public AbstractPower makeCopy()
 	{
-		return new SouliumReactorPower(owner, source, amount);
+		return new BurningPower(owner, source, amount);
 	}
 
 	@Override
@@ -57,12 +61,34 @@ public class SouliumReactorPower extends AbstractPower implements CloneablePower
 	}
 
 	@Override
-	public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source)
+	public void atEndOfRound()
 	{
-		if (target == owner && power.ID.equals(HonkaiPower.id))
+		if (this.amount <= 1)
 		{
-			flash();
-			addToBot(new DamageAllEnemiesAction(owner, DamageInfo.createDamageMatrix(amount, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE));
+			this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, id));
+		} else
+		{
+			this.addToBot(new ReducePowerAction(this.owner, this.owner, id, (int) Math.ceil(amount / 2d)));
 		}
+	}
+
+	@Override
+	public int onAttacked(DamageInfo info, int damageAmount)
+	{
+		if (info.type == DamageInfo.DamageType.NORMAL)
+			addToTop(new DamageAction(owner, new DamageInfo(info.owner, amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+		return damageAmount;
+	}
+
+	@Override
+	public int getHealthBarAmount()
+	{
+		return amount;
+	}
+
+	@Override
+	public Color getColor()
+	{
+		return color;
 	}
 }

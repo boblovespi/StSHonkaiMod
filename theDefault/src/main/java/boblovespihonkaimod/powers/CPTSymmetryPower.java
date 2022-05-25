@@ -48,7 +48,7 @@ public class CPTSymmetryPower extends AbstractPower implements CloneablePowerInt
 	@Override
 	public void updateDescription()
 	{
-		description = strings.DESCRIPTIONS[0];
+		description = strings.DESCRIPTIONS[0] + amount + ((amount > 1) ? strings.DESCRIPTIONS[2] : strings.DESCRIPTIONS[1]) + strings.DESCRIPTIONS[3];
 	}
 
 	@Override

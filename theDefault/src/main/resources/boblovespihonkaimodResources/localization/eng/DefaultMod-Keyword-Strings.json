@@ -7,6 +7,14 @@
     "DESCRIPTION": "Whenever you play a card, gain 1 dexterity this turn only."
   },
   {
+    "PROPER_NAME": "Honkai Lance",
+    "NAMES": [
+      "Honkai Lance",
+      "Honkai lance"
+    ],
+    "DESCRIPTION": "A 0 cost 8 damage card that costs 3 Honkai to play."
+  },
+  {
     "PROPER_NAME": "Multiword Keyword",
     "NAMES": [
       "Multiword Keyword",
@@ -20,7 +28,6 @@
   {
     "PROPER_NAME": "White Comet",
     "NAMES": [
-      "White_Comet",
       "White Comet"
     ],
     "DESCRIPTION": "Common attacks deal 2 extra damage. Common skills gain 2 extra block."
@@ -32,5 +39,26 @@
       "honkai"
     ],
     "DESCRIPTION": "A malevolent energy."
+  },
+  {
+    "PROPER_NAME": "Void Drifter",
+    "NAMES": [
+      "Void Drifter"
+    ],
+    "DESCRIPTION": "Deal extra damage equal to your Honkai. Take extra damage equal to your Honkai."
+  },
+  {
+    "NAMES": [
+      "IDK",
+      "somekeyword"
+    ],
+    "DESCRIPTION": "The card costs 0 energy when you have enough Honkai."
+  },
+  {
+    "NAMES": [
+      "Burning",
+      "burning"
+    ],
+    "DESCRIPTION": "Whenever the target gets attacked, deal additional damage."
   }
 ]

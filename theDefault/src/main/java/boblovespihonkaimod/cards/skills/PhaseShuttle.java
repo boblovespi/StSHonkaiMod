@@ -22,7 +22,7 @@ public class PhaseShuttle extends AbstractDynamicCard
 	private static final CardType TYPE = CardType.SKILL;
 	private static final int COST = 0;
 	private static final int DRAW = 2;
-	private static final int UPGRADE_DRAW = 1;
+	private static final int UPGRADE_DRAW = 0;
 	private static final int ENERGY = 2;
 	private static final int ENERGY_UPGRADE = 1;
 	private static final int VOIDS = 2;
@@ -54,7 +54,7 @@ public class PhaseShuttle extends AbstractDynamicCard
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m)
 	{
-		addToBot(new DrawCardAction(magicNumber));
+		addToBot(new DrawCardAction(draw));
 		addToBot(new GainEnergyAction(magicNumber));
 		addToBot(new MakeTempCardInDiscardAction(new VoidCard(), defaultSecondMagicNumber));
 	}

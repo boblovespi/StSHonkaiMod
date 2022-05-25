@@ -15,8 +15,24 @@
     "NAME": "Comet Ward",
     "DESCRIPTIONS": ["Common attacks apply weak to enemies."]
   },
-  "boblovespihonkaimod:shockResonance": {
+  "boblovespihonkaimod:shockResonancePower": {
     "NAME": "Shock Resonance",
     "DESCRIPTIONS": ["When an enemy is stunned, apply 1 Vulnerable."]
+  },
+  "boblovespihonkaimod:cptSymmetryPower": {
+    "NAME": "CPT Symmetry",
+    "DESCRIPTIONS": ["At the start of your turn, draw #b", " card", " cards", " from your discard pile."]
+  },
+  "boblovespihonkaimod:souliumReactorPower": {
+    "NAME": "Soulium Reactor",
+    "DESCRIPTIONS": ["Whenever you gain Honkai, deal #b", " damage to all enemies."]
+  },
+  "boblovespihonkaimod:zeroPointEnergyPower": {
+    "NAME": "Zero Point Energy",
+    "DESCRIPTIONS": ["Whenever you draw a Void, replace it with a Honkai Lance."]
+  },
+  "boblovespihonkaimod:burningPower": {
+    "NAME": "Burning",
+    "DESCRIPTIONS": ["Take #b", " damage when attacked."]
   }
 }

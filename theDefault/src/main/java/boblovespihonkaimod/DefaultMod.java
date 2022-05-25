@@ -15,6 +15,7 @@ import boblovespihonkaimod.potions.PlaceholderPotion;
 import boblovespihonkaimod.relics.*;
 import boblovespihonkaimod.util.IDCheckDontTouchPls;
 import boblovespihonkaimod.util.TextureLoader;
+import boblovespihonkaimod.variables.CardDrawVariable;
 import boblovespihonkaimod.variables.DefaultCustomVariable;
 import boblovespihonkaimod.variables.DefaultSecondMagicNumber;
 import com.badlogic.gdx.Gdx;
@@ -404,6 +405,9 @@ public class DefaultMod implements
         BaseMod.addRelicToCustomPool(new StarterRelic(), COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new DecayedFragment(), COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new AmplifierMatrix(), COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new GemOfSerenity(), COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new JudgementOfShamash(), COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new TheSevenThundersOfRetribution(), COLOR_GRAY);
 
         // This adds a relic to the Shared pool. Every character can find this relic.
         // BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);
@@ -431,6 +435,7 @@ public class DefaultMod implements
         BaseMod.addDynamicVariable(new DefaultCustomVariable());
         BaseMod.addDynamicVariable(new DefaultSecondMagicNumber());
         BaseMod.addDynamicVariable(new NekoStomp.Var());
+        BaseMod.addDynamicVariable(new CardDrawVariable());
 
         logger.info("Adding cards");
         // Add the cards

@@ -56,7 +56,7 @@
   },
   "boblovespihonkaimod:whiteComet": {
     "NAME": "White Comet",
-    "DESCRIPTION": "Equip the boblovespihonkaimod:White_Comet Battlesuit. Gain !M! boblovespihonkaimod:Honkai."
+    "DESCRIPTION": "Equip the White Comet Battlesuit. Gain !M! boblovespihonkaimod:Honkai."
   },
   "boblovespihonkaimod:nekoStomp": {
     "NAME": "Neko Stomp",
@@ -84,7 +84,7 @@
   },
   "boblovespihonkaimod:subspacePocket": {
     "NAME": "Subspace Pocket",
-    "DESCRIPTION": "card creation, requires 10 honkai, consumes 10 honkai, creates a random rare?"
+    "DESCRIPTION": "Draw !boblovepsi:Draw! cards. Exhaust !M! cards. Exhaust. NL somekeyword 10."
   },
   "boblovespihonkaimod:voidDrifter": {
     "NAME": "Void Drifter",
@@ -120,7 +120,7 @@
   },
   "boblovespihonkaimod:phaseShuttle": {
     "NAME": "Phase Shuttle",
-    "DESCRIPTION": "Draw !M! cards. Gain !M! energy. Add !boblovespihonkaimod:SecondMagic! Voids to your discard pile. Exhaust."
+    "DESCRIPTION": "Draw !boblovespihonkaimod:Draw! cards. Gain !M! energy. Add !boblovespihonkaimod:SecondMagic! Voids to your discard pile. Exhaust."
   },
   "boblovespihonkaimod:souliumReactor": {
     "NAME": "Soulium Reactor",
@@ -147,5 +147,17 @@
   "boblovespihonkaimod:gyrodriveKata": {
     "NAME": "Gyrodrive Kata",
     "DESCRIPTION": "Deal !D! damage !M! times. Increase the number of times you deal damage to that enemy by 1 for two turns."
+  },
+  "boblovespihonkaimod:gungnirFire": {
+    "NAME": "Gungnir Fire",
+    "DESCRIPTION": "Deal !D! damage. Apply !M! Burning."
+  },
+  "boblovespihonkaimod:railgun": {
+    "NAME": "The Seven Thunders of Retribution",
+    "DESCRIPTION": "Deal !D! damage. Requires !M! boblovespihonkaimod:Honkai to play."
+  },
+  "boblovespihonkaimod:unequip": {
+    "NAME": "Unequip",
+    "DESCRIPTION": "Unequip your current battlesuit."
   }
 }
