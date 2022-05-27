@@ -57,8 +57,8 @@ public class HonkaiLance extends AbstractDynamicCard
 	public void use(AbstractPlayer p, AbstractMonster m)
 	{
 		addToBot(new VFXAction(p, new SweepingBeamEffect(m.hb_x, m.hb_y, p.flipHorizontal), 0.2f));
-		addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
 		addToBot(new ReducePowerAction(p, p, HonkaiPower.id, magicNumber));
+		addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
 	}
 
 	@Override

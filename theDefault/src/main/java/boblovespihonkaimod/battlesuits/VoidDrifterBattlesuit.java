@@ -1,10 +1,14 @@
 package boblovespihonkaimod.battlesuits;
 
 import boblovespihonkaimod.DefaultMod;
+import boblovespihonkaimod.actions.DiscardSkillAddHonkaiLanceAction;
+import boblovespihonkaimod.actions.DoubleHonkaiAction;
 import boblovespihonkaimod.cards.HonkaiEnergyStatus;
 import boblovespihonkaimod.cards.attacks.HonkaiLance;
 import boblovespihonkaimod.powers.HonkaiPower;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.StunMonsterAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -13,6 +17,8 @@ import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.StanceStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
 
 public class VoidDrifterBattlesuit extends AbstractBattlesuit
 {
@@ -23,12 +29,18 @@ public class VoidDrifterBattlesuit extends AbstractBattlesuit
 	{
 		super.ID = ID;
 		name = strings.NAME;
+		ultEnergyCost = 2;
 	}
 
 	@Override
 	public void onUltUse()
 	{
-		// todo: figure out
+		AbstractDungeon.actionManager.addToBottom(new DoubleHonkaiAction(AbstractDungeon.player, AbstractDungeon.player));
+		AbstractDungeon.actionManager.addToBottom(new DiscardSkillAddHonkaiLanceAction(AbstractDungeon.player));
+		for (AbstractMonster mon : AbstractDungeon.getMonsters().monsters)
+		{
+			AbstractDungeon.actionManager.addToBottom(new StunMonsterAction(mon, AbstractDungeon.player));
+		}
 	}
 
 	@Override
