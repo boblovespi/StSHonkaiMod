@@ -3,29 +3,30 @@ package boblovespihonkaimod.cards.powers;
 import boblovespihonkaimod.DefaultMod;
 import boblovespihonkaimod.cards.AbstractDynamicCard;
 import boblovespihonkaimod.characters.TheDefault;
-import boblovespihonkaimod.powers.CPTSymmetryPower;
+import boblovespihonkaimod.powers.SouliumReactorPower;
+import boblovespihonkaimod.powers.StarFlamePower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class ChargeParityTimeSymmetry extends AbstractDynamicCard
+public class StarFlame extends AbstractDynamicCard
 {
-	public static final String ID = DefaultMod.makeID("cptSymmetry");
+	public static final String ID = DefaultMod.makeID("starFlame");
 	public static final String IMG = DefaultMod.makeCardPath("Power.png");
 	public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
 	// STAT DECLARATION
-	private static final CardRarity RARITY = CardRarity.RARE;
+	private static final CardRarity RARITY = CardRarity.UNCOMMON;
 	private static final CardTarget TARGET = CardTarget.SELF;
 	private static final CardType TYPE = CardType.POWER;
-	private static final int COST = 1;
+	private static final int COST = 2;
 	private static final int MAGIC = 1;
-	private static final int MAGIC_UPGRADE = 0;
+	private static final int MAGIC_UPGRADE = 1;
 
-	public ChargeParityTimeSymmetry()
+	public StarFlame()
 	{
 		super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
 		magicNumber = baseMagicNumber = MAGIC;
@@ -34,7 +35,7 @@ public class ChargeParityTimeSymmetry extends AbstractDynamicCard
 	@Override
 	public void use(AbstractPlayer player, AbstractMonster abstractMonster)
 	{
-		addToBot(new ApplyPowerAction(player, player, new CPTSymmetryPower(player, player, magicNumber)));
+		addToBot(new ApplyPowerAction(player, player, new StarFlamePower(player, player, magicNumber)));
 	}
 
 	@Override
@@ -43,10 +44,7 @@ public class ChargeParityTimeSymmetry extends AbstractDynamicCard
 		if (!upgraded)
 		{
 			upgradeName();
-			// upgradeMagicNumber(MAGIC_UPGRADE);
-			isInnate = true;
-			rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-			initializeDescription();
+			upgradeMagicNumber(MAGIC_UPGRADE);
 		}
 	}
 }

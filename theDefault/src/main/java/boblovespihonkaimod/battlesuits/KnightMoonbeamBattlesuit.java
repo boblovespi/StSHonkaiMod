@@ -55,7 +55,7 @@ public class KnightMoonbeamBattlesuit extends AbstractBattlesuit
 	@Override
 	public void update()
 	{
-
+		super.update();
 	}
 
 	@Override

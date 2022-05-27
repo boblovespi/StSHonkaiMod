@@ -58,6 +58,7 @@ public class HOVBattlesuit extends AbstractBattlesuit
 	@Override
 	public void update()
 	{
+		super.update();
 		if (AbstractDungeon.player.hoveredCard != null)
 			addBlockMod(AbstractDungeon.player.hoveredCard);
 		AbstractDungeon.player.hand.group.forEach(this::addBlockMod);

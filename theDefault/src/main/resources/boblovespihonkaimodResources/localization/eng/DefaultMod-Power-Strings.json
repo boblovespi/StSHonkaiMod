@@ -34,5 +34,9 @@
   "boblovespihonkaimod:burningPower": {
     "NAME": "Burning",
     "DESCRIPTIONS": ["Take #b", " damage when attacked."]
+  },
+  "boblovespihonkaimod:starFlamePower": {
+    "NAME": "Burning",
+    "DESCRIPTIONS": ["Apply #b", " Burning on your first attack."]
   }
 }

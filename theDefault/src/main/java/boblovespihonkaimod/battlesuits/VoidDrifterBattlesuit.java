@@ -46,6 +46,7 @@ public class VoidDrifterBattlesuit extends AbstractBattlesuit
 	@Override
 	public void atStartOfTurn()
 	{
+		super.atStartOfTurn();
 		AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new HonkaiEnergyStatus(), 1, true, true));
 		AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new HonkaiLance()));
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new HonkaiPower(AbstractDungeon.player, AbstractDungeon.player, 2)));

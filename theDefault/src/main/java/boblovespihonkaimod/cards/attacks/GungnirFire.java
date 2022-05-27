@@ -8,7 +8,9 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.status.Burn;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.ExplosionSmallEffect;
@@ -24,9 +26,9 @@ public class GungnirFire extends AbstractDynamicCard
 	private static final CardTarget TARGET = CardTarget.ENEMY;
 	private static final CardType TYPE = CardType.ATTACK;
 	private static final int COST = 2;
-	private static final int DAMAGE = 20;
+	private static final int DAMAGE = 23;
 	private static final int DAMAGE_UPGRADE = 8;
-	private static final int MAGIC = 3;
+	private static final int MAGIC = 6;
 	private static final int UPGRADE = 3;
 
 	// /STAT DECLARATION/
@@ -58,7 +60,8 @@ public class GungnirFire extends AbstractDynamicCard
 	public void use(AbstractPlayer p, AbstractMonster m)
 	{
 		addToBot(new VFXAction(new ExplosionSmallEffect(m.hb_x, m.hb_y)));
-		addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SMASH));
+		addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
 		addToBot(new ApplyPowerAction(m, p, new BurningPower(m, p, magicNumber)));
+		addToBot(new MakeTempCardInDiscardAction(new Burn(), 2));
 	}
 }

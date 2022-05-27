@@ -19,7 +19,6 @@ public class CardDrawVariable extends DynamicVariable
 	public boolean isModified(AbstractCard card)
 	{
 		return card.draw != card.baseDraw;
-
 	}
 
 	@Override

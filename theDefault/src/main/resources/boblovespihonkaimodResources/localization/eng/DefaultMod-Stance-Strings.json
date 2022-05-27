@@ -1,10 +1,10 @@
 {
   "boblovespihonkaimod:whiteComet": {
     "NAME": "White Comet",
-    "DESCRIPTIONS": ["Common attacks deal 2 extra damage. Common skills gain 2 extra block."]
+    "DESCRIPTION": ["Common attacks deal 2 extra damage. Common skills gain 2 extra block.", "Neko-Charm!"]
   },
   "boblovespihonkaimod:voidDrifter": {
     "NAME": "Void Drifter",
-    "DESCRIPTIONS": ["Common attacks deal 2 extra damage. Common skills gain 2 extra block."]
+    "DESCRIPTION": ["Common attacks deal 2 extra damage. Common skills gain 2 extra block."]
   }
 }

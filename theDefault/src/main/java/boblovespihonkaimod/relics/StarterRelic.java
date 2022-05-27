@@ -8,6 +8,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
@@ -49,6 +50,7 @@ public class StarterRelic extends CustomRelic
 			//			AbstractDungeon.actionManager.addToBottom(new VFXAction(new CollectorCurseEffect(player.hb.cX, player.hb.cY), 2.0F));
 			player.currentHealth -= Math.min(player.currentHealth - 1, player.getPower(HonkaiPower.id).amount);
 			addToTop(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, HonkaiPower.id, 1000));
+			player.damage(new DamageInfo(player, 0));
 		}
 	}
 }
