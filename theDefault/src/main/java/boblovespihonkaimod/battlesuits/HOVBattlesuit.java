@@ -1,8 +1,8 @@
 package boblovespihonkaimod.battlesuits;
 
-import basemod.abstracts.AbstractCardModifier;
-import basemod.helpers.CardModifierManager;
 import boblovespihonkaimod.DefaultMod;
+import boblovespihonkaimod.actions.DoubleHonkaiAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -27,84 +27,32 @@ public class HOVBattlesuit extends AbstractBattlesuit
 	}
 
 	@Override
-	public void updateDescription()
+	public void atStartOfTurn()
 	{
-		description = strings.DESCRIPTION[0];
-	}
-
-	@Override
-	public void onPlayCard(AbstractCard card)
-	{
-		super.onPlayCard(card);
-	}
-
-	@Override
-	public void onEnterStance()
-	{
-
+		AbstractDungeon.actionManager.addToBottom(new DrawCardAction(2));
+		AbstractDungeon.actionManager.addToBottom(new DoubleHonkaiAction(AbstractDungeon.player, AbstractDungeon.player));
 	}
 
 	@Override
 	public void onExitOrVictory()
 	{
-		AbstractDungeon.player.masterDeck.group.forEach(this::removeBlockMod);
-		AbstractDungeon.player.hand.group.forEach(this::removeBlockMod);
-		AbstractDungeon.player.drawPile.group.forEach(this::removeBlockMod);
-		AbstractDungeon.player.discardPile.group.forEach(this::removeBlockMod);
-		AbstractDungeon.player.limbo.group.forEach(this::removeBlockMod);
-		AbstractDungeon.player.exhaustPile.group.forEach(this::removeBlockMod);
 	}
 
 	@Override
 	public void update()
 	{
 		super.update();
-		if (AbstractDungeon.player.hoveredCard != null)
-			addBlockMod(AbstractDungeon.player.hoveredCard);
-		AbstractDungeon.player.hand.group.forEach(this::addBlockMod);
+	}
+
+	@Override
+	public void updateDescription()
+	{
+		description = strings.DESCRIPTION[0];
 	}
 
 	@Override
 	public float atDamageGive(float damage, DamageInfo.DamageType type, AbstractCard card)
 	{
-		if (type == DamageInfo.DamageType.NORMAL && card.type == AbstractCard.CardType.ATTACK)
-			if (card.rarity == AbstractCard.CardRarity.BASIC || card.rarity == AbstractCard.CardRarity.COMMON)
-				return damage + 2;
 		return damage;
-	}
-
-	private void addBlockMod(AbstractCard card)
-	{
-		if (card.type == AbstractCard.CardType.SKILL && !CardModifierManager.hasModifier(card, BlockMod.ID))
-			if (card.rarity == AbstractCard.CardRarity.COMMON || card.rarity == AbstractCard.CardRarity.BASIC)
-				CardModifierManager.addModifier(card, new BlockMod());
-	}
-
-	private void removeBlockMod(AbstractCard card)
-	{
-		CardModifierManager.removeModifiersById(card, BlockMod.ID, false);
-	}
-
-	public static class BlockMod extends AbstractCardModifier
-	{
-		public static String ID = DefaultMod.makeID("blockMod");
-
-		@Override
-		public float modifyBlock(float block, AbstractCard card)
-		{
-			return block + 2;
-		}
-
-		@Override
-		public AbstractCardModifier makeCopy()
-		{
-			return new BlockMod();
-		}
-
-		@Override
-		public String identifier(AbstractCard card)
-		{
-			return ID;
-		}
 	}
 }

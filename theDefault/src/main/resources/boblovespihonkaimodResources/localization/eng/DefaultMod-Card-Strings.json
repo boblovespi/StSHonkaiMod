@@ -56,7 +56,7 @@
   },
   "boblovespihonkaimod:whiteComet": {
     "NAME": "White Comet",
-    "DESCRIPTION": "Equip the White Comet Battlesuit. Gain !M! boblovespihonkaimod:Honkai."
+    "DESCRIPTION": "Equip the boblovespihonkaimod:White_Comet Battlesuit. Gain !M! boblovespihonkaimod:Honkai."
   },
   "boblovespihonkaimod:nekoStomp": {
     "NAME": "Neko Stomp",
@@ -84,11 +84,11 @@
   },
   "boblovespihonkaimod:subspacePocket": {
     "NAME": "Subspace Pocket",
-    "DESCRIPTION": "Draw !boblovepsihonkaimod:Draw! cards. Exhaust !M! cards. Exhaust. NL somekeyword 10."
+    "DESCRIPTION": "Draw !boblovespihonkaimod:Draw! cards. Exhaust !M! cards. Exhaust. NL somekeyword 10."
   },
   "boblovespihonkaimod:voidDrifter": {
     "NAME": "Void Drifter",
-    "DESCRIPTION": "Equip the Void Drifter Battlesuit. Gain !M! boblovespihonkaimod:Honkai."
+    "DESCRIPTION": "Equip the boblovespihonkaimod:Void_Drifter Battlesuit. Gain !M! boblovespihonkaimod:Honkai."
   },
   "boblovespihonkaimod:divinePrayer": {
     "NAME": "Divine Prayer",
@@ -120,7 +120,7 @@
   },
   "boblovespihonkaimod:phaseShuttle": {
     "NAME": "Phase Shuttle",
-    "DESCRIPTION": "Draw !boblovespihonkaimod:Draw! cards. Gain !M! energy. Add !boblovespihonkaimod:SecondMagic! Voids to your discard pile. Exhaust."
+    "DESCRIPTION": "{@@}Draw !boblovespihonkaimod:Draw! cards. Gain [E] [E]{!M!|>2= [E]}. Add !boblovespihonkaimod:SecondMagic! Voids to your discard pile. Exhaust."
   },
   "boblovespihonkaimod:souliumReactor": {
     "NAME": "Soulium Reactor",
@@ -132,8 +132,8 @@
   },
   "boblovespihonkaimod:zeroPointEnergy": {
     "NAME": "Zero Point Energy",
-    "DESCRIPTION": "Whenever you draw a Void, exhaust the Void and add a Honkai Lance to your hand.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you draw a Void, exhaust the Void and add a Honkai Lance to your hand."
+    "DESCRIPTION": "Whenever you draw a Void, exhaust the Void and add a boblovespihonkaimod:Honkai_Lance to your hand.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you draw a Void, exhaust the Void and add a boblovespihonkaimod:Honkai_Lance to your hand."
   },
   "boblovespihonkaimod:zeitstrom": {
     "NAME": "Zeitstrom",
@@ -175,5 +175,22 @@
   "boblovespihonkaimod:infection": {
     "NAME": "Infection",
     "DESCRIPTION": "{@@}Draw !boblovespihonkaimod:Draw! card{!boblovespihonkaimod:Draw!|>1=s}. Gain !M! boblovespihonkaimod:Honkai."
+  },
+  "boblovespihonkaimod:imaginaryConstruct": {
+    "NAME": "Imaginary Construct",
+    "DESCRIPTION": "{@@}Add 1 random {!Upgrades!|1=Upgraded }rare card to your hand. Shuffle a Void into your draw pile. Requires !M! boblovespihonkaimod:Honkai to play. NL Exhaust."
+  },
+  "boblovespihonkaimod:honkaiCascade": {
+    "NAME": "Honkai Cascade",
+    "DESCRIPTION": "Multiply your boblovespihonkaimod:Honkai by X+1.",
+    "UPGRADE_DESCRIPTION": "Multiply your boblovespihonkaimod:Honkai by X+2."
+  },
+  "boblovespihonkaimod:novaFissure": {
+    "NAME": "Nova Fissure",
+    "DESCRIPTION": "Deal !D! damage. NL If Fatal, heal !M!."
+  },
+  "boblovespihonkaimod:voidArchives": {
+    "NAME": "Void Archives",
+    "DESCRIPTION": "{@@}Select 1 card from your draw pile. Add !M! upgraded cop{!M!|>1=ies|@=y} into your hand. NL Exhaust."
   }
 }

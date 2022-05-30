@@ -10,7 +10,8 @@
     "PROPER_NAME": "Honkai Lance",
     "NAMES": [
       "Honkai Lance",
-      "Honkai lance"
+      "Honkai lance",
+      "honkai_lance"
     ],
     "DESCRIPTION": "A 0 cost 8 damage card that costs 3 Honkai to play."
   },
@@ -28,7 +29,8 @@
   {
     "PROPER_NAME": "White Comet",
     "NAMES": [
-      "White Comet"
+      "White Comet",
+      "white_comet"
     ],
     "DESCRIPTION": "Common attacks deal 2 extra damage. Common skills gain 2 extra block."
   },
@@ -43,7 +45,8 @@
   {
     "PROPER_NAME": "Void Drifter",
     "NAMES": [
-      "Void Drifter"
+      "Void Drifter",
+      "void_drifter"
     ],
     "DESCRIPTION": "Deal extra damage equal to your Honkai. Take extra damage equal to your Honkai."
   },
